@@ -35,8 +35,6 @@ const fujiPrice = .89
 const galaPrice = .64
 const pinkPrice = .55
 
-
-
 // PROBLEM 1
 
 /*
@@ -50,11 +48,12 @@ const pinkPrice = .55
 */
 
 // CODE HERE
-
-let totalAcres = [];
-
-
-
+let newArray = [...fujiAcres, ...galaAcres, ...pinkAcres];
+let totalAcres = 0;
+for (let i = 0; i < newArray.length; i++) {
+  totalAcres += newArray[i];
+}
+console.log("The total acres picked is: " + totalAcres);
 
 
 // PROBLEM 2
@@ -70,9 +69,8 @@ let totalAcres = [];
 */
 
 // CODE HERE
-
-
-
+let averageDailyAcres = totalAcres / newArray.length;
+console.log("The average daily acres picked is " + averageDailyAcres);
 
 
 // PROBLEM 3
@@ -111,6 +109,7 @@ let days = 0
 
 
 
+
 // PROBLEM 4
 
 /*
@@ -137,12 +136,25 @@ let days = 0
 
 // CODE HERE
 
-// let fujiTons =
-// let galaTons =
-// let pinkTons =
+// Create new arrays to store daily apple yields in tons
+let fujiTons = fujiAcres.slice(); // Create a copy of fujiAcres
+let galaTons = galaAcres.slice(); // Create a copy of galaAcres
+let pinkTons = pinkAcres.slice(); // Create a copy of pinkAcres
 
+// Convert acres to tons (1 acre yields 6.5 tons of apples)
+const tonsPerAcre = 6.5;
 
+// Loop through the copied arrays and calculate daily yields in tons
+for (let i = 0; i < fujiTons.length; i++) {
+  fujiTons[i] *= tonsPerAcre;
+  galaTons[i] *= tonsPerAcre;
+  pinkTons[i] *= tonsPerAcre;
+}
 
+// Log the new arrays to the console
+console.log("Fuji Daily Apple Yields (in tons):", fujiTons);
+console.log("Gala Daily Apple Yields (in tons):", galaTons);
+console.log("Pink Daily Apple Yields (in tons):", pinkTons);
 
 
 
@@ -164,11 +176,33 @@ let days = 0
 
 // CODE HERE 
 
-// let fujiPounds =
-// let galaPounds =
-// let pinkPounds =
+// Converting the Arrays into Pounds first
+let lbsInATon = 2000
+for (let i = 0; i < fujiTons.length; i++) {
+    fujiTons[i] *= lbsInATon;
+    galaTons[i] *= lbsInATon;
+    pinkTons[i] *= lbsInATon;
+  }
 
+// Using a For Loops to calculate the sum of each variety
+// For loop is being used to calculate the SUM of each Array
+let sum1 = 0
+let sum2 = 0
+let sum3 = 0
+for (let i = 0; i < fujiTons.length; i++) {
+    sum1 += fujiTons[i];
+  }
+for (let i = 0; i < galaTons.length; i++) {
+    sum2 += galaTons[i];
+  }
+for (let i = 0; i < pinkTons.length; i++) {
+    sum3 += pinkTons[i];
+  }
 
+let fujiPounds = sum1
+let galaPounds = sum2
+let pinkPounds = sum3
+console.log("Fuji pounds are ", sum1, "/ Gala pounds are ", sum2, "/ Pink pounds are ", sum3)
 
 
 
