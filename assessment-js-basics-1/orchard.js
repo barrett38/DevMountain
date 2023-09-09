@@ -100,7 +100,7 @@ console.log("The average daily acres picked is " + averageDailyAcres);
 
     Note: This is not the most efficient way to
     calculate this number. But! It is a great
-    way to get a whole number without using 
+    way to get a whole number witshout using 
     any Math methods. 
 
 */
@@ -110,11 +110,18 @@ let days = 0
 
 // CODE HERE
 
-// while acresLeft > 0:  // Define the condition to continue the loop
-//     days += 1  // Increment the count by 1 in each iteration
-//     acresLeft -= averageDailyAcres // subtract your daily average from the number of acres left
+// Run the loop while acresLeft is above 0
+while (acresLeft > 0) {
+  // Increment the days counter
+  days++;
 
-// console.log("Days: ", sdays)
+  // Subtract the daily average from acresLeft
+  acresLeft -= averageDailyAcres;
+}
+
+// Log the total days to the console
+
+console.log("Days: ", days)
 
 
 // PROBLEM 4
