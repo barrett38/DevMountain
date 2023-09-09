@@ -51,6 +51,8 @@ const pinkPrice = .55
 
 // CODE HERE
 
+let totalAcres = [];
+
 
 
 
