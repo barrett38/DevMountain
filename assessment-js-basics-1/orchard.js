@@ -48,7 +48,9 @@ const pinkPrice = .55
 */
 
 // CODE HERE
+// Combining the Arrays into 1 longer array
 let newArray = [...fujiAcres, ...galaAcres, ...pinkAcres];
+// Adding the new Array together to get the answer
 let totalAcres = 0;
 for (let i = 0; i < newArray.length; i++) {
   totalAcres += newArray[i];
@@ -69,6 +71,7 @@ console.log("The total acres picked is: " + totalAcres);
 */
 
 // CODE HERE
+// Basic calculation of the daily amount
 let averageDailyAcres = totalAcres / newArray.length;
 console.log("The average daily acres picked is " + averageDailyAcres);
 
@@ -107,7 +110,11 @@ let days = 0
 
 // CODE HERE
 
+// while acresLeft > 0:  // Define the condition to continue the loop
+//     days += 1  // Increment the count by 1 in each iteration
+//     acresLeft -= averageDailyAcres // subtract your daily average from the number of acres left
 
+// console.log("Days: ", sdays)
 
 
 // PROBLEM 4
@@ -205,8 +212,6 @@ let pinkPounds = sum3
 console.log("Fuji pounds are ", sum1, "/ Gala pounds are ", sum2, "/ Pink pounds are ", sum3)
 
 
-
-
 // PROBLEM 6
 
 /*
@@ -225,14 +230,12 @@ console.log("Fuji pounds are ", sum1, "/ Gala pounds are ", sum2, "/ Pink pounds
 
 // CODE HERE
 
-// let fujiProfit =
-// let galaProfit =
-// let pinkProfit =
-
-
-
-
-
+let fujiProfit = sum1 * fujiPrice
+console.log ("Price of Fuji is $", fujiProfit)
+let galaProfit = sum2 * galaPrice
+console.log ("Price of Gala is $", galaProfit)
+let pinkProfit = sum3 * pinkPrice
+console.log ("Price of Pink is $", pinkProfit)
 
 // PROBLEM 7
 
@@ -246,3 +249,5 @@ console.log("Fuji pounds are ", sum1, "/ Gala pounds are ", sum2, "/ Pink pounds
 
 // CODE HERE
 
+let totalProfit = fujiProfit + galaProfit + pinkProfit
+console.log("Total Profit is $", totalProfit)
