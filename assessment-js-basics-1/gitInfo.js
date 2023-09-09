@@ -10,6 +10,7 @@
 */
 
 //CODE HERE
+let gitDefinition = "Git is a system used for tracking version control and changes during software development.";
 
 //////////////////PROBLEM 2////////////////////
 /*
@@ -18,6 +19,7 @@
 */
 
 //CODE HERE
+let gitHubDefinition = "GitHub is a web-based platform used for hosting, managing, and collaborating on software development projects that use the Git version control system.";
 
 //////////////////PROBLEM 3////////////////////
 /*
@@ -26,6 +28,7 @@
 */
 
 //CODE HERE
+let gitInitDefinition = "The git init command is used to initialize a new Git repository.";
 
 //////////////////PROBLEM 4////////////////////
 /*
@@ -34,6 +37,7 @@
 */
 
 //CODE HERE
+let gitCloneDefinition = "The git clone command is used to create a copy of a given git repository from a remote location, such as GitHub.";
 
 //////////////////PROBLEM 5////////////////////
 /*
@@ -42,6 +46,7 @@
 */
 
 //CODE HERE
+let gitStatusDefinition = "The git status command is used to show the current state of your working directory and your Git repository.";
 
 //////////////////PROBLEM 6////////////////////
 /*
@@ -53,6 +58,8 @@
 */
 
 //CODE HERE
+let gitAddDefinition = "The git add command sets up the changes that need to be made during the next Commit.";
+let gitAddCode = "git add .";
 
 //////////////////PROBLEM 7////////////////////
 /*
@@ -64,6 +71,8 @@
 */
 
 //CODE HERE
+let gitCommitDefinition = "The git commit command takes the changes from the git add command and records those changes.";
+let gitCommitCode = "git commit -am 'initial commit'";
 
 
 //////////////////PROBLEM 8////////////////////
@@ -73,3 +82,4 @@
 */
 
 //CODE HERE
+let gitPushDefinition = "The git push command takes the Committed work and sends (or 'pushes') it to a given repository from the local location to the given remote location.";
